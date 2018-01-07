@@ -1,0 +1,109 @@
+
+
+
+
+
+.jumbotron h1{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:300;
+  white-space: nowrap;
+}
+
+
+.jumbotron{
+  background-color: #262626;
+  color: white;
+  background-color:rgb(50,58,69);
+  width: 100vw;
+}
+
+
+
+@media only screen and (min-device-width: 500px) {
+
+.jumbotron h1{
+  font-size: 60px;
+  padding-top:15px;
+  margin-top:0px;
+  padding-left: 15px;  
+}
+
+.jumbotron{
+  padding-left: 15px;
+  padding-top: 0px;
+  height: 95px; 
+}
+
+#nav-bar ul {
+	list-style-type: none;
+    overflow: hidden;
+    padding-right: 40px;
+}
+
+#nav-bar {
+	padding-right: 30px;
+}
+
+#nav-bar li {
+	float: right;
+	list-style-type: none;
+	padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+a.nav-bar-item {
+	display: block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight:300;
+    font-size: 25px;
+    padding-top: 30px;
+}
+
+.underline-on-hover::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin: 0 auto;
+    height: 1px;
+    background: white;
+    transition: width .3s;
+}
+
+.underline-on-hover:hover::after {
+    width: 100%;
+}
+
+a.current-page-tab {
+	color: rgb(78, 91, 110);
+}
+
+#site-logo {
+	height: 75px;
+	padding-top: 20px;
+	padding-left: 30px;
+}
+
+
+
+}
+
+
+
+
+@media only screen and (max-device-width: 500px) and (orientation:landscape) {
+
+
+
+
+}
+
+
+
+@media only screen and (max-device-width: 500px) and (orientation:portrait) {
+
+
+
+}
