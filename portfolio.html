@@ -38,10 +38,6 @@
 						   		<a class="nav-bar-item underline-on-hover" href="index.html">home</a>
 						  	</li>
 						</ul>
-			    			<!-- <h2 id="homeTab" style="cursor:pointer;">home</h2> 
-			    			<h2 id="aboutTab" style="cursor:pointer;">about</h2> 
-			    			<h2 id="portfolioTab" style="cursor:pointer;">portfolio</h2> 
-			    			<h2 id="contactTab" style="cursor:pointer;">contact</h2>  -->
 					</div>
 		    	</div>
 		    </div>
@@ -49,15 +45,15 @@
 
 		<div class="col-md-12 banner">
 			<div class="col-md-12 banner-image-container">
-  				<img class="banner-image" src="DMA\Banner\0Register.png">
-  				<img class="banner-image" src="DMA\Banner\1Home.png">
-				<img class="banner-image" src="DMA\Banner\2Logs.png">
-				<img class="banner-image" src="DMA\Banner\3LogsForm.png">
-				<img class="banner-image" src="DMA\Banner\4Chart.png">
-				<img class="banner-image" src="DMA\Banner\5ChartTooltip.png">
-				<img class="banner-image" src="DMA\Banner\6Import.png">
-				<img class="banner-image" src="DMA\Banner\7Timeline.png">
-				<img class="banner-image" src="DMA\Banner\8FAQs.png">
+  				<img class="banner-image" src="Portfolio\DMA\Banner\0Register.png">
+  				<img class="banner-image" src="Portfolio\DMA\Banner\1Home.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\2Logs.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\3LogsForm.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\4Chart.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\5ChartTooltip.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\6Import.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\7Timeline.png">
+				<img class="banner-image" src="Portfolio\DMA\Banner\8FAQs.png">
 			</div>
 		</div>
 
@@ -68,37 +64,45 @@
 				</div>
 			</div>
 			<div class="row">
-
 				<div class="text text-line">
-				Awarded the <span class="red-text">Best Third Year Project 2017</span>, on the BSc Computer Science degree at the University of Warwick.
-			</div>
+					Awarded the <span class="red-text">Best Third Year Project 2017</span>, on the BSc Computer Science degree at the University of Warwick.
+				</div>
 			</div>
 
 			<div class="row">
-				<div class="col-md-12 content-image-container">
-					<img class="content-image" src="DMA\Content\Home.png">
+				<div class="col-md-12 slideshow-image-container">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\0Home.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\1Charts.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\2ChartsTooltip.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\3Timeline.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\4Log.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\5LogForm.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\6Import.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\7FAQs.png">
+					<img class="slideshow-image FA" src="Portfolio\DMA\Final\8Register.png">
+					
+					<button class="slideshow-button left mac-button" onclick="showNextSlide(-1, 'FA', 0)">&#10094;</button>
+  					<button class="slideshow-button right mac-button" onclick="showNextSlide(1, 'FA', 0)">&#10095;</button>
 				</div>
 			</div>
+
 			<div class="row">
-				<div class="col-md-12 content-image-container">
-					<img class="content-image" src="DMA\Content\Chart.png">
+				<div class="col-md-12 slideshow-image-container">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\0HomeM.png">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\1TimelineM.png">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\2LogM.png">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\3LogFormM.png">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\4FAQsM.png">
+					<img class="slideshow-image phone FAM" src="Portfolio\DMA\Final\5RegisterM.png">
+					
+					<button class="slideshow-button left phone-button" onclick="showNextSlide(-1, 'FAM', 1)">&#10094;</button>
+  					<button class="slideshow-button right phone-button" onclick="showNextSlide(1, 'FAM', 1)">&#10095;</button>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 content-image-container">
-					<img class="content-image" src="DMA\Content\Timeline.png">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 content-image-container">
-					<img class="content-image" src="DMA\Content\LogForm.png">
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12 content-image-container">
-					<img class="content-image" src="DMA\Content\CGM.png">
-				</div>
-			</div>
+
+
+
+			
 
 		</div>
 
@@ -107,15 +111,14 @@
 
 
 
-
-
-
-
-
-
 		<script>
 			var imageIndex = 0;
+			var slideIndex = [1, 1];
 			bannerCarousel();
+			
+
+			slideshow(1, 'FA', 0);
+			slideshow(1, 'FAM', 1);
 
 			function bannerCarousel() {
 		    	var i;
@@ -133,6 +136,27 @@
 		    	bannerImages[imageIndex - 1].style.display = "block";
 		    	setTimeout(bannerCarousel, 3000);
 			}
+
+			function slideshow(slideNum, element_class, slideshowId) {
+				var i;
+				var slideImages = document.getElementsByClassName(element_class);
+				var numImages = slideImages.length;
+				if (slideNum > numImages) {
+					slideIndex[slideshowId] = 1
+				}  
+				if (slideNum < 1) {
+					slideIndex[slideshowId] = numImages
+				}
+				for (i = 0; i < numImages; i++) {
+     				slideImages[i].style.display = "none";  
+  				}
+  				slideImages[slideIndex[slideshowId]-1].style.display = "block";  
+			}
+
+			function showNextSlide(n, element_class, slideshowId) {
+  				slideshow(slideIndex[slideshowId] += n, element_class, slideshowId);
+			}
+
 		</script>
 
 	</body>

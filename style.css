@@ -77,7 +77,7 @@
 }
 
 .text-line {
-  font-size: 19px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -86,12 +86,73 @@
   padding-top: 50px;
 }
 
-.content-image-container {
+.slideshow-image-container {
   max-width:1000px; 
   margin: 0 auto;
   float: initial;
+  margin-top: 50px;
 }
 
+.slideshow-image {
+  width:100%;
+}
+
+.slideshow-image.phone {
+  width:40%;
+  margin-left:30%;
+}
+
+.slideshow-button {
+  color: rgb(50,58,69);
+  background-color: rgba(255,255,255,0.75);
+  position: absolute;
+  top: calc(50% - 22px);
+  border: none;
+  padding: 10px 14px;
+  font-size: 17px;
+}
+
+.slideshow-button:hover {
+  background-color: rgba(50,58,69,0.5);
+  color: rgb(255,255,255);
+}
+
+.slideshow-button.left {
+  left: 0%;
+}
+
+.slideshow-button.right {
+  right: 0%;
+}
+
+.mac-button {
+  top: 40%;
+  padding: 1% 1.6%;
+  background-color: rgba(255, 255, 255, 0.65)
+}
+
+.mac-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(230,76,102);
+}
+
+.phone-button {
+  background-color: rgba(50,58,69,0.5);
+  color: rgb(255,255,255);
+}
+
+.phone-button:hover {
+  background-color: rgba(50,58,69,0.9);
+  color: rgb(255,255,255);
+}
+
+.slideshow-button.phone-button.left {
+  left: 22%;
+}
+
+.slideshow-button.phone-button.right {
+  right: 22%;
+}
 
 
 .col-xs-4, .col-xs-6, .col-xs-8, .col-xs-12,
